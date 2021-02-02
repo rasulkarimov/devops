@@ -4,12 +4,7 @@ def run_ls(options, arguments) {
 }
 node('master') {
     stage('Detect') {
-        scm {
-          github('rasulkarimov/jenkins-groovy','main')
-        }
-        triggers {
-          scm('* * * * *')
-        }
+        
         timedate_start = sh script:"date",returnStdout:true
         run_ls('-l','/tmp')
     }
