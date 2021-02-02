@@ -11,6 +11,7 @@ pipeline {
         stage("docker login") {
             steps {
                 echo " ============== docker login =================="
+                echo "Test line"
             }
         }
         stage("create docker image") {
