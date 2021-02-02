@@ -8,7 +8,7 @@ node('master') {
         run_ls('-l','/tmp')
     }
     stage('Build') {
-        
+        echo "test line"
     }
     stage('Configure') {
     
