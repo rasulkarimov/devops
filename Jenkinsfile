@@ -3,6 +3,7 @@ def run_ls(options, arguments) {
     echo "${ls}"
 }
 node('master') {
+    triggers { pollSCM('* * * * *') }
     stage('Detect') {
         
         timedate_start = sh script:"date",returnStdout:true
